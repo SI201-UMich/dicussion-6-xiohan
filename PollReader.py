@@ -100,7 +100,14 @@ class PollReader():
                    among likely voters, in that order.
         """
         
-        
+        totalh = 0
+        totalt = 0
+        count = 0
+
+        for i in self.data_dict['sample type']:
+            if self.data_dict['sample type'][i] == 'LV'
+                totalh = self.data_dict['Harris result'][i]
+                totalt = self.data_dict['Trump result'][i]
 
 
     def polling_history_change(self):
@@ -114,7 +121,21 @@ class PollReader():
             tuple: A tuple containing the net change for Harris and Trump, in that order.
                    Positive values indicate an increase, negative values indicate a decrease.
         """
-        pass
+        totalh = 0
+        totalt = 0
+
+
+        earlyt = max(self.data_dict['Harris result'])[30:]/30
+        latet = max(self.data_dict['Harris result'])[:31]/30
+
+        earlyt = max(self.data_dict['Trump result'])[30:]/30
+        latet = max(self.data_dict['Trump result'])[:31]/30
+        
+
+        
+
+            
+
 
 
 class TestPollReader(unittest.TestCase):
